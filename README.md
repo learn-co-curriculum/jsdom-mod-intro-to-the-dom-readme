@@ -4,7 +4,7 @@
 
 We know how to write HTML and style it with CSS. But what if we want to do more
 with the content in our pages, such as adding or deleting elements or modifying
-data? It's time to move on to interactivity, and understanding the Document
+them? It's time to move on to interactivity, and understanding the Document
 Object Model, or DOM, will give us the bridge to get there.
 
 ## Objectives
@@ -15,11 +15,13 @@ Object Model, or DOM, will give us the bridge to get there.
 
 ## Identify the Document Object Model
 
-The Document Object Model is a representation of an HTML document that can be
-manipulated by programming languages. Thanks to the DOM and the way it creates a
-representative model of document elements, we can use a language such as
-JavaScript to navigate those elements and add to them, delete them or modify
-them.
+Just as your DNA represents a code-based version of you, the DOM represents a
+code-based version of a web page. Because of this, when you change the DOM, you
+change what's displayed in the browser. Adding elements, removing elements,
+changing elements in the DOM changes what you see in the browser screen. Thanks
+to the DOM and the way it creates a representative model of document elements,
+we can use a language such as JavaScript to work with those elements and add to
+them, delete them or modify them.
 
 To see the DOM in action, let's take a look at the HTML that constructs every
 website we visit.
@@ -39,8 +41,7 @@ revealed to you. It will look something like this:
 ![html-source](https://s3.amazonaws.com/learn-verified/html-javascript-
 ![lesson.png)
 
-The browser interprets this HTML, along with CSS and JavaScript, to present the
-source code the way it appears in the browser.
+The browser reads this HTML, along with CSS and JavaScript, to create the DOM.
 
 Notice that what we see in our the `view-source` tab looks very similar to HTML
 you may have seen previously.
@@ -116,7 +117,7 @@ browser. The HTML, however, once loaded on a webpage, does not change.
 ## Explore How JavaScript Manipulates the DOM
 
 With JavaScript we can (1) view a current representation of our Document Object
-Model. With Javascript we can also (2) select specific portions of the DOM, and
+Model. With JavaScript we can also (2) select specific portions of the DOM, and
 manipulate them, which changes what shows up in a browser window.
 
 Let's get to it.
@@ -131,10 +132,10 @@ You'll get a `#document` returned. Click the triangle and you'll see the DOM. If
 you followed along above, you'll see a `head` tag, but no `header` tag. So by
 typing in `document` it looks like our header is gone. However, if we view page
 source, the HTML is unchanged. Remember, this is the difference between the DOM
-(current representation of the page) and the HTML (The initial representation of
+(current representation of the page) and the HTML (the initial representation of
 the page).
 
-2. Use Javascript to manipulate our DOM
+2. Use JavaScript to manipulate our DOM
 
 **Refresh your browser to get the header back. Let's remove the header now with
 JavaScript.** Open up the console and type in the following and press "Enter."
@@ -156,7 +157,7 @@ the following:
 
 Take a look at the top of the page again. The header is gone. But do you think
 the HTML has just changed? Well, no. As you know, the HTML never changes after
-it is first rendered. Instead, we accessed the Document Object Model, altered
+it is first rendered. Instead, we accessed the Document Object Model, which altered
 the model and that altered the appearance of our web page. This is the same as
 we did before, but with code. **To get the header back, just hit refresh.**
 
