@@ -93,7 +93,7 @@ just deleted it!
 Now did you just delete the HTML? No. Let's prove it.
 
 View the page source. Right click (or two fingers click on the mac) on the
-lesson page in the browser and select view page source. You will see the that
+lesson page in the browser and select "View Page Source." You will see the that
 the HTML is just as it always was, with a header tag and lots of other elements
 inside.
 
