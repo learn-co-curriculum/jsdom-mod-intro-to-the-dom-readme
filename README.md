@@ -126,7 +126,7 @@ first use JavaScript to
 
 Let's get to it.
 
-1. Use JavaScript to view the current representation of the DOM
+### Use JavaScript to view the current representation of the DOM
 
 From inside the developer console, click on the tab that says the word
 "console." At the bottom you will see a cursor. There, type the word `document`
@@ -139,7 +139,7 @@ source, the HTML is unchanged. Remember, this is the difference between the DOM
 (current representation of the page) and the HTML (the initial representation of
 the page).
 
-2. Use JavaScript to manipulate our DOM
+### Use JavaScript to manipulate our DOM
 
 **Refresh your browser to get the header back. Let's remove the header now with
 JavaScript.** Open up the console and type in the following and press "Enter."
