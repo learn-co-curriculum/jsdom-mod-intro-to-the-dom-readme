@@ -141,9 +141,9 @@ the page).
 **Refresh your browser to get the header back. Let's remove the header now with
 JavaScript.** Open up the console and type in the following and press "Enter."
 
-  ```javascript
-   document.querySelector('header')
-  ```
+```javascript
+  document.querySelector('header')
+```
 
 This will return something like this: `<header class="site-
 header">...</header>`. Go ahead and click on that display triangle to see more.
@@ -153,7 +153,7 @@ OK, now let's do something with this header. Open up the console, and type in
 the following:
 
 ```javascript
-   document.querySelector('header').remove()
+  document.querySelector('header').remove()
 ```
 
 Take a look at the top of the page again. The header is gone. But do you think
