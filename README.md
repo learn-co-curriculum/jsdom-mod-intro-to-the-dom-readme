@@ -30,8 +30,7 @@ website we visit.
 
 1. Change the URL of a web page to view the source
 
-In a Google Chrome browser, go to the URL `https://learn.co/tracks/javascript-
-with-style`. To see the HTML of that page, add `view-source:` to the front of
+In a Google Chrome browser, go to the URL `https://learn.co/tracks/javascript-with-style`. To see the HTML of that page, add `view-source:` to the front of
 the URL. The complete final URL will be `view-source:https://learn.co/tracks
 /javascript-with-style`.
 
