@@ -117,9 +117,12 @@ loaded on a webpage, **does not change**.
 
 ## Explore How JavaScript Manipulates the DOM
 
-With JavaScript we can view a current representation of our Document Object
-Model. But we can **also** select specific portions of the DOM, and manipulate
-them (which changes what shows up in a browser).
+We can do the _exact same_ work we did by selecting elements and deleting them
+with delete key in the Developer Console, with JavaScript. As above, we will
+first use JavaScript to
+
+1. View a current representation of our Document Object Model
+2. Select specific portions of the DOM, and delete them (which changes what shows up in a browser)
 
 Let's get to it.
 
