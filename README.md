@@ -101,22 +101,25 @@ inside.
 
 The changes that the **developer console** caused, and the changes the
 **developer console** currently displays are changes in the *Document Object
-Model*, but not in our *HTML*. Our webpage now looks blank, reflecting the
-missing header in our DOM, even though our HTML still has content in the header
-tags.
+Model*. **Changing the DOM results in the browser displaying a different
+rendered page.** The HTML, which lives on the server **is unchanged**.
 
-So we can conclude that by changing the Document Object Model, we can change the
-way our web page displays. And we can do this even if our HTML is unchanged. The
-HTML is essentially the starting point of the page's content. But as we just saw
-by deleting the header of the page, what is displayed can change. When we change
-it, we change the Document Object Model, and that changes the appearance in the
-browser. The HTML, however, once loaded on a webpage, does not change.
+Said another way: Our webpage now looks blank, reflecting the missing header in
+our DOM, even though our HTML still has content in the header tags.
+
+We can see that by changing the Document Object Model, we can change the way
+our web page displays. Doing so leaves the source content, our HTML on the
+server, unchanged.  The HTML is essentially the starting point of the page's
+content. But as we just saw by deleting the header of the page, what is
+displayed can change. When we change it, we change the Document Object Model,
+and _that_ changes the appearance in the browser. The HTML, however, once
+loaded on a webpage, **does not change**.
 
 ## Explore How JavaScript Manipulates the DOM
 
-With JavaScript we can (1) view a current representation of our Document Object
-Model. With JavaScript we can also (2) select specific portions of the DOM, and
-manipulate them, which changes what shows up in a browser window.
+With JavaScript we can view a current representation of our Document Object
+Model. But we can **also** select specific portions of the DOM, and manipulate
+them (which changes what shows up in a browser).
 
 Let's get to it.
 
@@ -166,10 +169,18 @@ we did before, but with code. **To get the header back, just hit refresh.**
 
 ## Conclusion
 
-* HTML is a markup language used to display content in a browser. When we change the appearance of a web page, what we are really changing is the Document Object Model, which directly determines the appearance displayed in the browser.
-* We can view and manipulate the Document Object Model by opening our developer tools, but when we do so the HTML is not changed.
-* We can also view our Document Object Model by opening the console and typing in the word `document`.
-* We can select a specific piece of the DOM by using JavaScript, such as `document.querySelector('header')`, and we can also use JavaScript to alter our DOM with `document.querySelector('header').remove()`
+* HTML is a markup language used to display content in a browser. When we
+  change the appearance of a web page, with JavaScript or the Developer
+  console, we are really changing is the Document Object Model, which directly
+  determines the appearance displayed in the browser.
+* We can view and manipulate the Document Object Model by opening our developer
+  tools, but when we do so the HTML is not changed.
+* We can also view our Document Object Model by opening the console and typing
+  in the word `document`.
+* We can select a specific piece of the DOM by using JavaScript, such as
+  `document.querySelector('header')`, and we can also use JavaScript to alter
+  our DOM with `document.querySelector('header').remove()`. We will cover more
+  DOM manipulation methods in later lessons.
 * **To get your header back, just hit refresh**
 
 [chrome]: https://www.google.com/chrome/browser/desktop/index.html
