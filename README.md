@@ -46,12 +46,12 @@ you may have seen previously.
 
 ```html
 <!DOCTYPE html>
-	<html>
-	  <head>
-	    <meta charset="utf-8">
-	    <title></title>
-	      <link rel="stylesheet" href="style.css">
-  	</head>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+  </head>
   <body>
     <header>....</header>
     <img id="kitten" class="" src="http://makeameme.org/media/templates/120/grumpy_cat.jpg" alt="" width="120" height="120">
