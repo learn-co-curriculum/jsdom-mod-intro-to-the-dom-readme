@@ -26,19 +26,18 @@ them, delete them or modify them.
 To see the DOM in action, let's take a look at the HTML that constructs every
 website we visit.
 
-> Note: We recommend that you use Google Chrome.  (You can download chrome [here](https://www.google.com/chrome/browser/desktop/index.html)). Because Chrome has several developer-friendly features, it's a preferred development tool.
+> **NOTE**: We recommend that you use Google Chrome.  (You can download chrome
+> [here][chrome]). Because Chrome has several developer-friendly features, it's
+> a preferred development tool.
 
-1. Change the URL of a web page to view the source
+### Change the URL of a web page to view the source
 
-In a Google Chrome browser, go to the URL `https://learn.co/tracks/javascript-with-style`. To see the HTML of that page, add `view-source:` to the front of
-the URL. The complete final URL will be `view-source:https://learn.co/tracks
-/javascript-with-style`.
+In a Google Chrome browser, go to the URL `https://learn.co/tracks/javascript-with-style`. To see the HTML of that page, add `view-source:` to the front of the URL. The complete final URL will be `view-source:https://learn.co/tracks /javascript-with-style`.
 
 By using the `view-source` URL prefix, all the page's source HTML will be
 revealed to you. It will look something like this:
 
-![html-source](https://s3.amazonaws.com/learn-verified/html-javascript-
-![lesson.png)
+![html-source](https://s3.amazonaws.com/learn-verified/html-javascript-lesson.png)
 
 The browser reads this HTML, along with CSS and JavaScript, to create the DOM.
 
@@ -75,7 +74,7 @@ Let's practice.
 
 ![opening-console](https://s3.amazonaws.com/learn-verified/opening-console.gif)
 
-  > From this web page, look at the Chrome menubar at the top of the page. Click
+> From this web page, look at the Chrome menubar at the top of the page. Click
 on "View", then select "Developer", then "Developer Tools". This will open the
 Google Developer Console.
 
@@ -83,7 +82,7 @@ Google Developer Console.
 
 ![delete-header](http://web-dev-readme-photos.s3.amazonaws.com/js/header-click.png)
 
-> When you open the Google Developer Console, you will see what looks like HTML.
+When you open the Google Developer Console, you will see what looks like HTML.
 There are head tags, body tags, divs, etc. Now from inside the developer
 console, click on the element that says `header`, and then press the delete
 button on your keyboard. You should see the header at the top turn white. You
@@ -121,7 +120,7 @@ manipulate them, which changes what shows up in a browser window.
 
 Let's get to it.
 
-1. Use Javascript to view the current representation of the DOM
+1. Use JavaScript to view the current representation of the DOM
 
 From inside the developer console, click on the tab that says the word
 "console." At the bottom you will see a cursor. There, type the word `document`
@@ -147,7 +146,7 @@ This will return something like this: `<header class="site-
 header">...</header>`. Go ahead and click on that display triangle to see more.
 
 It retrieves the header tag, which contains the lesson title among other things.
-Ok, now let's do something with this header. Open up the console, and type in
+OK, now let's do something with this header. Open up the console, and type in
 the following:
 
 ```javascript
@@ -167,8 +166,10 @@ we did before, but with code. **To get the header back, just hit refresh.**
 
 ## Conclusion
 
-* HTML is a markup language used to display content in a browser. When we change the appearance of a web page, what we are really changing is the Document Object Model, which directly determines the appearance displayed in the browser.  
-* We can view and manipulate the Document Object Model by opening our developer tools, but when we do so the HTML is not changed.  
+* HTML is a markup language used to display content in a browser. When we change the appearance of a web page, what we are really changing is the Document Object Model, which directly determines the appearance displayed in the browser.
+* We can view and manipulate the Document Object Model by opening our developer tools, but when we do so the HTML is not changed.
 * We can also view our Document Object Model by opening the console and typing in the word `document`.
 * We can select a specific piece of the DOM by using JavaScript, such as `document.querySelector('header')`, and we can also use JavaScript to alter our DOM with `document.querySelector('header').remove()`
 * **To get your header back, just hit refresh**
+
+[chrome]: https://www.google.com/chrome/browser/desktop/index.html
