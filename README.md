@@ -7,9 +7,10 @@ the Document Object Model (DOM). We've acquired some JavaScript sight words,
 let's balance the equation by learning about the DOM.
 
 Once we know what the DOM is, we'll be able to move to our first step in DOM
-Programming:
+Programming. But we need to know more about our co-pilot, the DOM. After this
+lesson, we'll be ready to move on to step one:
 
-1. **Ask the DOM to find an HTML element or elements in the rendered page**
+1. Ask the DOM to find an HTML element or elements in the rendered page
 2. Remove the selected element(s) or add a new element next to the selected element
 3. Adjust a property of the selected element(s)
 
