@@ -17,7 +17,7 @@ Programming:
 
 1. Identify the Document Object Model (DOM)
 2. Explain How the DOM is Created
-3. Identify the DOM as a JavaScript _object_
+3. Identify the DOM as JavaScript _objects_
 
 ## Identify the Document Object Model
 
@@ -54,18 +54,32 @@ Recalling our biology metaphor, adding elements, removing elements, changing
 elements in the DOM changes what you see in the browser screen. We'll explore
 this in a later lesson.
 
-## Identify the DOM as a JavaScript _object_
+## Identify the DOM as JavaScript _objects_
 
 Recall that JavaScript is Object-Oriented. The DOM is available inside Chrome
-as an object called `document`.
+through two _variables_: `window` and `document`.
 
-As an _object_ it has _properties_:
+The `window` variable points to an _object_ the represents Chrome's information
+about the browser, well, "window." It has many functions, but the essential one
+is "it's a place where everything is." It's where the Things are defined
+(`Array` and `Number`). It also tracks browser information like:
+
+```javascript
+window.innerHeight;
+// returns the inner height of the browser window.
+```
+
+It also has _methods_.  We won't use it too much. Since we want to change
+content, not operating system information, we're going to focus on an object
+called `document`.
+
+As an _object_, `document` has _properties_:
 
 ```javascript
 document.URL //=> http://www.flatironschool.com
 ```
 
-As an _object_ it has _methods_:
+As an _object_ `document` has _methods_:
 
 ```javascript
 document.write("Moof") //=> Removes all content, replaces it with "Moof"
@@ -78,9 +92,8 @@ document.write("Moof") //=> Removes all content, replaces it with "Moof"
 
 ## Conclusion
 
-
 In this lesson we've met our partner, the DOM, a JavaScript object that is a
 representation of the HTML, CSS and JavaScript loaded by the browser when we
-visit a page.
+visit a page. We normally interact with it through the `document` object.
 
 [chrome]: https://www.google.com/chrome/browser/desktop/index.html
