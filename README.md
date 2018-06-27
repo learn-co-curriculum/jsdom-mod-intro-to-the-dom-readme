@@ -85,6 +85,11 @@ As an _object_ `document` has _methods_:
 document.write("Moof") //=> Removes all content, replaces it with "Moof"
 ```
 
+The _methods_ and _properties_ that the DOM provides via its objects is called
+the DOM's Application Programming Interface, or API. It's just a vocabulary
+word that you're likely to see online. But it just means "the things that these
+objects know how to do."
+
 ## Resources
 
 - [CSS Tricks - What is the DOM?](https://css-tricks.com/dom/)
