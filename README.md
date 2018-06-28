@@ -40,9 +40,9 @@ provides the browser. Let's step through that process.
    point, nothing is displayed on the screen. This time when nothing is
    displayed is _very brief_ so our human eyes never really catch it.
 4. The browser _then_ uses the DOM _object_ to create the rendered page. While we
-   often learn that browsers "display HTML" that's not _exactly_ accurate. They
-   use the HTML to create a "middleman" that they, _in turn_ use to display the
-   structured and styled content
+   often learn that browsers "display HTML" that's not _exactly_ accurate.
+   Browsers use the HTML to create a "middleman" that they, _in turn_ use to
+   display the structured and styled content
 
 Recalling our biology metaphor, adding elements, removing elements, changing
 elements in the DOM changes what you see in the browser screen. We'll explore
