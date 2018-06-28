@@ -2,168 +2,86 @@
 
 ## Problem Statement
 
-We know how to write HTML and style it with CSS. But what if we want to do more
-with the content in our pages, such as adding or deleting elements or modifying
-them? It's time to move on to interactivity, and understanding the Document
-Object Model, or DOM, will give us the bridge to get there.
+Previously you've learned that JavaScript was _born_ in the browser along with
+the Document Object Model (DOM). We've acquired some JavaScript sight words,
+let's balance the equation by learning about the DOM.
 
 ## Objectives
 
-1. Identify the Document Object Model
-2. Interact with the Document Object Model
-3. Explore how JavaScript manipulates the DOM
+1. Identify the Document Object Model (DOM)
+2. Explain How the DOM is Created
+3. Identify the DOM as JavaScript _objects_
 
 ## Identify the Document Object Model
 
-Just as your DNA represents a code-based version of you, the DOM represents a
-code-based version of a web page. Because of this, when you change the DOM, you
-change what's displayed in the browser. Adding elements, removing elements,
-changing elements in the DOM changes what you see in the browser screen. Thanks
-to the DOM and the way it creates a representative model of document elements,
-we can use a language such as JavaScript to work with those elements and add to
-them, delete them or modify them.
+Let's start with a biology metaphor. Your DNA represents a code-based version
+of you. The DOM represents a code-based version of a web page. If some process
+edits your DNA, ~mutant powers~ changes will be made in your body. Similarly,
+if some process changes the DOM, what's displayed in the browser _changes as
+well_.
 
-To see the DOM in action, let's take a look at the HTML that constructs every
-website we visit.
+## Explain How the DOM is Created
 
-> **NOTE**: We recommend that you use Google Chrome.  (You can download chrome
-> [here][chrome]). Because Chrome has several developer-friendly features, it's
-> a preferred development tool.
+The DOM is created when the page loads from the HTML that the web server
+provides the browser. Let's step through that process.
+
+> **NOTE**: We use [Google Chrome][chrome].
 
 ### Change the URL of a web page to view the source
 
-In a Google Chrome browser, go to the URL `https://learn.co/tracks/javascript-with-style`. To see the HTML of that page, add `view-source:` to the front of the URL. The complete final URL will be `view-source:https://learn.co/tracks /javascript-with-style`.
+1. In a Google Chrome browser, go to the URL `https://learn.co/tracks/javascript-with-style`
+2. To see the HTML of that page, add `view-source:` to the front of the URL.
+   The complete final URL will be `view-source:https://learn.co/tracks/javascript-with-style`.
+   By using the `view-source` URL prefix, all the page's source HTML appears.
+   It will look something like this:
+   ![html-source](https://s3.amazonaws.com/learn-verified/html-javascript-lesson.png)
+3. The browser reads this HTML, along with CSS and JavaScript defined in
+   `<script>` or `<link>` tags, to create the DOM _inside the browser_. At this
+   point, nothing is displayed on the screen
+4. The browser uses the DOM _object_ to create the rendered page. While we
+   often learn that browsers "display HTML" that's not _exactly_ accurate. They
+   use the HTML to create a "middleman" that, _in turn_ displays the structured
+   and styled content
 
-By using the `view-source` URL prefix, all the page's source HTML will be
-revealed to you. It will look something like this:
+Recalling our biology metaphor, adding elements, removing elements, changing
+elements in the DOM changes what you see in the browser screen. We'll explore
+this in a later lesson.
 
-![html-source](https://s3.amazonaws.com/learn-verified/html-javascript-lesson.png)
+## Identify the DOM as JavaScript _objects_
 
-The browser reads this HTML, along with CSS and JavaScript, to create the DOM.
+Recall that JavaScript is Object-Oriented. The DOM is available inside Chrome
+through two _variables_: `window` and `document`.
 
-Notice that what we see in our the `view-source` tab looks very similar to HTML
-you may have seen previously.
-
-```html
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <header>....</header>
-    <img id="kitten" class="" src="http://makeameme.org/media/templates/120/grumpy_cat.jpg" alt="" width="120" height="120">
-  </body>
-  <script src="https://raw.githubusercontent.com/learn-co-curriculum/js-and-the-web/master/spin.js" charset="utf-8"></script>
-</html>
-
-```
-
-It may look like our browser is displaying the HTML that we see, but it is not.
-Instead, our browser is displaying the Document Object Model of the respective
-web page.
-
-## Interact with the Document Object Model
-
-The best way to understand the Document Object Model is to interact with it.
-Let's practice.
-
-1. Open the Google Developer console
-
-![opening-console](https://s3.amazonaws.com/learn-verified/opening-console.gif)
-
-> From this web page, look at the Chrome menubar at the top of the page. Click
-on "View", then select "Developer", then "Developer Tools". This will open the
-Google Developer Console.
-
-2. Manipulate the DOM
-
-![delete-header](http://web-dev-readme-photos.s3.amazonaws.com/js/header-click.png)
-
-When you open the Google Developer Console, you will see what looks like HTML.
-There are head tags, body tags, divs, etc. Now from inside the developer
-console, click on the element that says `header`, and then press the delete
-button on your keyboard. You should see the header at the top turn white. You
-just deleted it!
-
-![deleted-header](http://web-dev-readme-photos.s3.amazonaws.com/js/deleted-header.png)
-
-Now did you just delete the HTML? No. Let's prove it.
-
-View the page source. Right click (or two fingers click on the mac) on the
-lesson page in the browser and select "View Page Source." You will see the that
-the HTML is just as it always was, with a header tag and lots of other elements
-inside.
-
-![html-source](https://s3.amazonaws.com/learn-verified/html-javascript-lesson.png)
-
-The changes that the **developer console** caused, and the changes the
-**developer console** currently displays are changes in the *Document Object
-Model*. **Changing the DOM results in the browser displaying a different
-rendered page.** The HTML, which lives on the server **is unchanged**.
-
-Said another way: Our webpage now looks blank, reflecting the missing header in
-our DOM, even though our HTML still has content in the header tags.
-
-We can see that by changing the Document Object Model, we can change the way
-our web page displays. Doing so leaves the source content, our HTML on the
-server, unchanged.  The HTML is essentially the starting point of the page's
-content. But as we just saw by deleting the header of the page, what is
-displayed can change. When we change it, we change the Document Object Model,
-and _that_ changes the appearance in the browser. The HTML, however, once
-loaded on a webpage, **does not change**.
-
-## Explore How JavaScript Manipulates the DOM
-
-We can do the _exact same_ work we did by selecting elements and deleting them
-with delete key in the Developer Console, with JavaScript. As above, we will
-first use JavaScript to
-
-1. View a current representation of our Document Object Model
-2. Select specific portions of the DOM, and delete them (which changes what shows up in a browser)
-
-Let's get to it.
-
-### Use JavaScript To View The Current Representation Of the DOM
-
-From inside the developer console, click on the tab that says the word
-"console." At the bottom you will see a cursor. There, type the word `document`
-and press "Enter.""
-
-You'll get a `#document` returned. Click the triangle and you'll see the DOM. If
-you followed along above, you'll see a `head` tag, but no `header` tag. So by
-typing in `document` it looks like our header is gone. However, if we view page
-source, the HTML is unchanged. Remember, this is the difference between the DOM
-(current representation of the page) and the HTML (the initial representation of
-the page).
-
-### Use JavaScript To Manipulate Our DOM
-
-**Refresh your browser to get the header back. Let's remove the header now with
-JavaScript.** Open up the console and type in the following and press "Enter."
+The `window` variable points to an _object_ the represents Chrome's information
+about the browser, well, "window." It has many functions, but the essential one
+is "it's a place where everything is." It's where the Things are defined
+(`Array` and `Number`). It also tracks browser information like:
 
 ```javascript
-  document.querySelector('header')
+window.innerHeight;
+// returns the inner height of the browser window.
 ```
 
-This will return something like this: `<header class="site-
-header">...</header>`. Go ahead and click on that display triangle to see more.
+It also has _methods_.  We won't use it too much. Since we want to change
+content, not operating system information, we're going to focus on an object
+called `document`.
 
-It retrieves the header tag, which contains the lesson title among other things.
-OK, now let's do something with this header. Open up the console, and type in
-the following:
+As an _object_, `document` has _properties_:
 
 ```javascript
-  document.querySelector('header').remove()
+document.URL //=> http://www.flatironschool.com
 ```
 
-Take a look at the top of the page again. The header is gone. But do you think
-the HTML has just changed? Well, no. As you know, the HTML never changes after
-it is first rendered. Instead, we accessed the Document Object Model, which altered
-the model and that altered the appearance of our web page. This is the same as
-we did before, but with code. **To get the header back, just hit refresh.**
+As an _object_ `document` has _methods_:
+
+```javascript
+document.write("Moof") //=> Removes all content, replaces it with "Moof"
+```
+
+The _methods_ and _properties_ that the DOM provides via its objects is called
+the DOM's Application Programming Interface, or API. It's just a vocabulary
+word that you're likely to see online. But it just means "the things that these
+objects know how to do."
 
 ## Resources
 
@@ -172,18 +90,8 @@ we did before, but with code. **To get the header back, just hit refresh.**
 
 ## Conclusion
 
-* HTML is a markup language used to display content in a browser. When we
-  change the appearance of a web page, with JavaScript or the Developer
-  console, we are really changing is the Document Object Model, which directly
-  determines the appearance displayed in the browser.
-* We can view and manipulate the Document Object Model by opening our developer
-  tools, but when we do so the HTML is not changed.
-* We can also view our Document Object Model by opening the console and typing
-  in the word `document`.
-* We can select a specific piece of the DOM by using JavaScript, such as
-  `document.querySelector('header')`, and we can also use JavaScript to alter
-  our DOM with `document.querySelector('header').remove()`. We will cover more
-  DOM manipulation methods in later lessons.
-* **To get your header back, just hit refresh**
+In this lesson we've met our partner, the DOM, a JavaScript object that is a
+representation of the HTML, CSS and JavaScript loaded by the browser when we
+visit a page. We normally interact with it through the `document` object.
 
 [chrome]: https://www.google.com/chrome/browser/desktop/index.html
