@@ -29,9 +29,8 @@ provides the browser. Let's step through that process.
 
 ### Change the URL of a web page to view the source
 
-1. In a Google Chrome browser, go to the URL `https://learn.co/tracks/javascript-with-style`
-2. To see the HTML of that page, add `view-source:` to the front of the URL.
-   The complete final URL will be `view-source:https://learn.co/tracks/javascript-with-style`.
+1. In a Google Chrome browser, copy the current URL and open it in another tab
+2. To see the HTML of this page, add `view-source:` to the front of the URL in the new tab
    By using the `view-source` URL prefix, all the page's source HTML appears.
    It will look something like this:
    ![html-source](https://s3.amazonaws.com/learn-verified/html-javascript-lesson.png)
