@@ -10,7 +10,7 @@ let's balance things out by learning about the DOM.
 
 1. Identify the Document Object Model (DOM)
 2. Explain How the DOM is Created
-3. Identify the DOM as JavaScript _objects_
+3. Identify the DOM as accessed by JavaScript _objects_
 
 ## Identify the Document Object Model
 
@@ -44,10 +44,9 @@ provides the browser. Let's step through that process.
    display the structured and styled content
 
 Recalling our biology metaphor, adding elements, removing elements, changing
-elements in the DOM changes what you see in the browser screen. We'll explore
-this in a later lesson.
+elements in the DOM (the DNA) changes what you see in the browser screen.
 
-## Identify the DOM as JavaScript _objects_
+## Identify the DOM as Accessed By JavaScript _objects_
 
 Recall that JavaScript is Object-Oriented. The DOM is available inside Chrome
 through two _variables_: `window` and `document`.
