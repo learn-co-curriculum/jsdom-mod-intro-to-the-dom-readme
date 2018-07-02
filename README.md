@@ -4,7 +4,7 @@
 
 Previously we've learned that JavaScript was _born_ in the browser along with
 the Document Object Model (DOM). We've acquired some JavaScript sight words,
-let's balance the equation by learning about the DOM.
+let's balance things out by learning about the DOM.
 
 ## Objectives
 
