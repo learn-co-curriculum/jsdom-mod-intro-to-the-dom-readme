@@ -37,7 +37,7 @@ provides the browser. Let's step through that process.
 3. The browser reads this HTML, along with CSS and JavaScript defined in
    `<script>` or `<link>` tags, to create the DOM _inside the browser_. At this
    point, nothing is displayed on the screen. This time when nothing is
-   displayed is _very brief_ so our human eyes never really catch it.
+   displayed is _very brief_ so our human eyes never really catch it
 4. The browser _then_ uses the DOM _object_ to create the rendered page. While we
    often learn that browsers "display HTML" that's not _exactly_ accurate.
    Browsers use the HTML to create a "middleman" that they, _in turn_ use to
